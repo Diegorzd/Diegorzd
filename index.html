@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenido a mi primera pagina publicada :)</h1>
+    </header>
+
+    <nav>
+        <a onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a onclick="mostrarSeccion('sobreMi')">Sobre mí</a>
+    </nav>
+
+    <main>
+
+        <section id="inicio" class="active">
+            <h2>Inicio</h2>
+            <p>Este sitio web me ayudara a poder obtener los links de mis herramientas utilizadas en el curso de Introduccion a los Sistemas</p>
+            <h2>Github</h2>
+            <p>Has click en el siguiente enlance para poder descargar GitHub <a href="https://github.com/" target="_blank">Click here.</a></p>
+            <h2>PSeInt</h2>
+            <p>Has click en el siguiente enlance para poder descargar PSeInt <a href="https://pseint.sourceforge.net/index.php?page=actualizacion.php" target="_blank">Click here.</a></p>
+            <h2>Visual Studio Code</h2>
+            <P>Esta pagina fue programa con la ayuda de Visual Studio code para descargarla has click en el siguiente enlace <a href="https://code.visualstudio.com/download" target="_blank">Click here.</a></P>
+        </section>
+
+        <section id="sobreMi">
+            <h2>Sobre mí</h2>
+            <p>estudiar Ingeniería en Sistemas ha sido todo un reto, pero también una experiencia súper interesante. Me gusta mucho cómo todo lo que aprendemos tiene aplicaciones reales, desde programar una app hasta entender cómo funciona la ciberseguridad en una empresa. A veces las materias se sienten pesadas, especialmente cuando hay que entregar varios proyectos al mismo tiempo, pero cuando ves que tu código corre sin errores o que lograste resolver un problema complicado, se siente genial.</p>
+        </section>
+
+
+        <aside>
+            <h3>Otras Informaciones</h3>
+            <p>Puedes encontrar más sobre mí en las siguientes redes sociales:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/diegosebastian.quezadarodriguez.73" target="_blank">📘 Facebook</a></li>
+                <li><a href="https://www.instagram.com/sebas.rzd/" target="_blank">📸 Instagram</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        &copy; 2025 Mi Página Web Diego Quezada
+    </footer>
+
+    <script>// Función para mostrar una sección específica
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll('section');
+      secciones.forEach(sec => sec.classList.remove('active'));
+      const activa = document.getElementById(id);
+      if (activa) activa.classList.add('active');
+    }</script>
+
+</body>
+</html>
